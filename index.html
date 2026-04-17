@@ -880,11 +880,11 @@ function applyLang(lang) {
   const weatherLoading = document.getElementById('slWeatherInsightText');
   if (insightLoading && !insightLoading.innerHTML) insightLoading.textContent = slT('sl.insight.loading');
   if (weatherLoading && !weatherLoading.innerHTML) weatherLoading.textContent = slT('sl.insight.weather.loading');
-  if (slCryptoData.length > 0) {
+  if (typeof slCryptoData !== 'undefined' && slCryptoData.length > 0) {
     if (slCurrentTab === 'crypto') slRenderCrypto(slCryptoData);
     else slLoadWeather();
   }
-  slUpdateTimestampEl();
+  if (typeof slUpdateTimestampEl === 'function') slUpdateTimestampEl();
 
   localStorage.setItem('lang', lang);
 }
