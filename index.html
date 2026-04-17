@@ -243,55 +243,43 @@
   .sl-btn-g { padding:.75rem 2rem; border-radius:2rem; border:1px solid rgba(127,119,221,.4); color:#AFA9EC; font-size:.9rem; background:transparent; cursor:pointer; text-decoration:none; transition:all .3s; display:inline-block; }
   .sl-btn-g:hover { background:rgba(127,119,221,.1); }
 
+  /* ── THEME BUTTON ── */
+  .theme-btn { width:32px; height:32px; border-radius:50%; border:1px solid rgba(127,119,221,0.3); background:transparent; color:var(--text2); cursor:pointer; font-size:1rem; display:flex; align-items:center; justify-content:center; transition:all .25s; }
+  .theme-btn:hover { border-color:var(--purple-400); color:var(--purple-200); background:rgba(127,119,221,.1); }
+
   /* ── DEMO NOTICE ── */
   .demo-notice { display:flex; align-items:flex-start; gap:.8rem; max-width:1100px; margin:0 auto 1.25rem; padding:.85rem 1.1rem; border-radius:10px; background:rgba(127,119,221,0.07); border:1px solid rgba(127,119,221,0.2); }
   .demo-notice-icon { font-size:1rem; flex-shrink:0; margin-top:.1rem; }
   .demo-notice-text { font-size:.78rem; color:var(--text3); line-height:1.65; }
   .demo-notice-text strong { color:var(--text2); }
-  .demo-badge { display:inline-flex; align-items:center; gap:6px; padding:.2rem .7rem; border-radius:2rem; font-size:.68rem; font-weight:600; letter-spacing:.12em; text-transform:uppercase; background:rgba(239,159,39,0.12); border:1px solid rgba(239,159,39,0.3); color:#EF9F27; margin-left:.6rem; vertical-align:middle; }
-
-  /* ── THEME TOGGLE ── */
-  .theme-btn { width:32px; height:32px; border-radius:50%; border:1px solid rgba(127,119,221,0.3); background:transparent; color:var(--text2); cursor:pointer; font-size:1rem; display:flex; align-items:center; justify-content:center; transition:all .25s; line-height:1; }
-  .theme-btn:hover { border-color:var(--purple-400); color:var(--purple-200); background:rgba(127,119,221,.1); }
+  .demo-badge { display:inline-flex; align-items:center; gap:6px; padding:.2rem .65rem; border-radius:2rem; font-size:.68rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; background:rgba(239,159,39,0.12); border:1px solid rgba(239,159,39,0.3); color:#EF9F27; margin-left:.5rem; vertical-align:middle; }
 
   /* ── LIGHT MODE ── */
   body.light { --bg:#f7f6ff; --bg2:#edeaff; --text:#1c1740; --text2:#3e3770; --text3:#6b6090; }
   body.light nav { background:rgba(247,246,255,0.9); border-bottom-color:rgba(127,119,221,0.2); }
+  body.light .hero-name { background:linear-gradient(135deg,#1c1740 30%,var(--purple-600) 70%,var(--purple-400) 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
   body.light .skill-card { background:rgba(127,119,221,0.05); }
-  body.light .skill-card::before { background:radial-gradient(circle at 50% 0%,rgba(127,119,221,0.1) 0%,transparent 60%); }
   body.light .stat-card { background:rgba(127,119,221,0.07); }
   body.light .cert-card { background:rgba(127,119,221,0.05); }
   body.light .lang-card { background:rgba(127,119,221,0.06); }
   body.light #about > div:last-child { background:rgba(127,119,221,0.06); border-color:rgba(127,119,221,0.15); }
-  body.light .sl-hero { background:linear-gradient(180deg,rgba(83,74,183,0.07) 0%,rgba(247,246,255,0) 100%); }
+  body.light .sl-hero { background:linear-gradient(180deg,rgba(83,74,183,0.07) 0%,transparent 100%); }
   body.light .sl-title span { background:linear-gradient(135deg,#2a2060 40%,#7F77DD 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
   body.light .srv-card { background:rgba(127,119,221,0.05); border-color:rgba(127,119,221,0.18); }
-  body.light .srv-card:hover { background:rgba(127,119,221,0.1); }
-  body.light .srv-card.active-srv { background:rgba(127,119,221,0.1); border-color:#7F77DD; }
+  body.light .srv-card:hover, body.light .srv-card.active-srv { background:rgba(127,119,221,0.1); }
   body.light .srv-desc { color:#5a5280; }
   body.light .sl-kpi { background:rgba(127,119,221,0.07); border-color:rgba(127,119,221,0.2); }
-  body.light .sl-kpi-label { color:#6b6090; }
   body.light .sl-chart-wrap { background:rgba(127,119,221,0.04); border-color:rgba(127,119,221,0.18); }
-  body.light .sl-chart-title { color:#5a5280; }
+  body.light .sl-chart-title, body.light .sl-panel-title { color:#5a5280; }
   body.light .sl-panel { background:rgba(127,119,221,0.04); border-color:rgba(127,119,221,0.18); }
-  body.light .sl-panel-title { color:#5a5280; }
   body.light .sl-insight { background:rgba(83,74,183,0.07); border-color:rgba(127,119,221,0.3); }
   body.light .sl-insight-text { color:#5a5280; }
   body.light .sl-insight-text strong { color:#3e3770; }
-  body.light .dtab { color:#6b6090; border-color:rgba(127,119,221,0.2); }
-  body.light .dtab.on { background:rgba(127,119,221,0.15); border-color:#7F77DD; color:#534AB7; }
-  body.light .sl-refresh-btn { color:#6b6090; border-color:rgba(127,119,221,0.2); }
-  body.light .sl-last-update { color:#6b6090; }
-  body.light .demo-notice { background:rgba(127,119,221,0.06); border-color:rgba(127,119,221,0.2); }
-  body.light .sl-weather-city { color:#5a5280; }
-  body.light .sl-weather-cond { color:#6b6090; }
-  body.light .sl-weather-row { border-bottom-color:rgba(127,119,221,0.12); }
-  body.light .glow-bg { background:radial-gradient(circle,rgba(83,74,183,0.05) 0%,transparent 70%); }
+  body.light .dtab { color:#6b6090; } body.light .dtab.on { background:rgba(127,119,221,0.15); color:#534AB7; }
+  body.light .sl-weather-city { color:#5a5280; } body.light .sl-weather-cond { color:#6b6090; }
+  body.light .demo-notice { background:rgba(127,119,221,0.06); }
   body.light footer { border-top-color:rgba(127,119,221,0.15); }
-  body.light .hero-name { background:linear-gradient(135deg,#1c1740 30%,var(--purple-600) 70%,var(--purple-400) 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
-  body.light .timeline::before { background:linear-gradient(to bottom,var(--purple-600),rgba(83,74,183,0)); }
   body.light .btn-ghost { color:var(--purple-600); border-color:rgba(83,74,183,0.4); }
-  body.light .btn-ghost:hover { background:rgba(83,74,183,0.08); }
 </style>
 </head>
 <body>
@@ -313,7 +301,7 @@
       <button class="lang-btn" id="btnES" onclick="setLang('es')">ES</button>
       <button class="lang-btn" id="btnEN" onclick="setLang('en')">EN</button>
     </div>
-    <button class="theme-btn" id="themeBtn" onclick="toggleTheme()" title="Cambiar tema">☀</button>
+    <button class="theme-btn" id="themeBtn" onclick="toggleTheme()">☀</button>
   </div>
 </nav>
 
@@ -517,11 +505,9 @@
     <h3 data-i18n="sl.demo.title">Así se ve SmartLayer en acción <span class="demo-badge">DEMO</span></h3>
   </div>
 
-  <div class="demo-notice" id="slDemoNotice">
+  <div class="demo-notice">
     <div class="demo-notice-icon">ℹ</div>
-    <div class="demo-notice-text" data-i18n="sl.demo.note">
-      <strong>¿Qué estás viendo?</strong> Este dashboard usa datos reales de APIs públicas (precios crypto y clima) para demostrar visualmente las capacidades de SmartLayer. En una implementación real, los datos serían los de tu negocio.
-    </div>
+    <div class="demo-notice-text" data-i18n="sl.demo.note"><strong>¿Qué estás viendo?</strong> Este dashboard usa datos reales de APIs públicas (precios crypto y clima) para demostrar las capacidades de SmartLayer. En una implementación real, los datos serían los de tu negocio.</div>
   </div>
 
   <div class="sl-dashboard">
@@ -531,62 +517,62 @@
         <button class="dtab" onclick="slSwitchTab(this,'weather')" data-i18n="sl.tab.weather">Condiciones Globales</button>
       </div>
       <div style="display:flex;align-items:center;gap:.75rem">
-        <span class="sl-last-update" id="slLastUpdate"></span>
-        <button class="sl-refresh-btn" onclick="slLoadAll()" data-i18n="sl.refresh">↻ Actualizar</button>
+        <span class="sl-last-update" id="slLastUpdate">Cargando...</span>
+        <button class="sl-refresh-btn" onclick="slLoadAll()">↻ Actualizar</button>
       </div>
     </div>
 
     <div id="sl-tab-crypto">
       <div class="sl-kpi-row" id="slKpiRow"></div>
       <div class="sl-chart-wrap">
-        <div class="sl-chart-title" data-i18n="sl.chart.bar">Variación de precio 24h — Top activos</div>
+        <div class="sl-chart-title">Variación de precio 24h — Top activos</div>
         <canvas id="slBarChart" height="180"></canvas>
       </div>
       <div class="sl-bottom-grid">
         <div class="sl-panel">
-          <div class="sl-panel-title" data-i18n="sl.panel.seg">Segmentación de activos por comportamiento</div>
+          <div class="sl-panel-title">Segmentación de activos por comportamiento</div>
           <div class="sl-seg-grid" id="slSegGrid"></div>
         </div>
         <div class="sl-panel">
-          <div class="sl-panel-title" data-i18n="sl.panel.mcap">Distribución de capitalización de mercado</div>
+          <div class="sl-panel-title">Distribución de capitalización de mercado</div>
           <canvas id="slDonutChart" height="180"></canvas>
         </div>
       </div>
       <div class="sl-insight" id="slInsightBar">
         <div class="sl-insight-icon">⚡</div>
-        <div class="sl-insight-text" id="slInsightBarText"></div>
+        <div class="sl-insight-text">Cargando análisis automático...</div>
       </div>
     </div>
 
     <div id="sl-tab-weather" style="display:none">
       <div class="sl-kpi-row" id="slWeatherKpi"></div>
       <div class="sl-chart-wrap">
-        <div class="sl-chart-title" data-i18n="sl.chart.temp">Temperatura horaria — Bogotá (últimas 24h)</div>
+        <div class="sl-chart-title">Temperatura horaria — Bogotá (últimas 24h)</div>
         <canvas id="slTempChart" height="180"></canvas>
       </div>
       <div class="sl-bottom-grid">
         <div class="sl-panel">
-          <div class="sl-panel-title" data-i18n="sl.panel.cities">Panel multi-ciudad en tiempo real</div>
+          <div class="sl-panel-title">Panel multi-ciudad en tiempo real</div>
           <div id="slCityList"></div>
         </div>
         <div class="sl-panel">
-          <div class="sl-panel-title" data-i18n="sl.panel.pred">Predicción próximas 6 horas</div>
+          <div class="sl-panel-title">Predicción próximas 6 horas</div>
           <canvas id="slPredChart" height="180"></canvas>
         </div>
       </div>
       <div class="sl-insight" id="slWeatherInsight">
         <div class="sl-insight-icon">⚡</div>
-        <div class="sl-insight-text" id="slWeatherInsightText"></div>
+        <div class="sl-insight-text">Cargando análisis climático...</div>
       </div>
     </div>
   </div>
 
   <div class="sl-cta-section">
-    <p style="font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:#7F77DD" data-i18n="sl.cta.label">¿Listo para verlo con tus datos?</p>
-    <h3 style="font-size:1.8rem;font-weight:700;margin-top:.5rem" data-i18n="sl.cta.title">Tu negocio tiene respuestas.<br>SmartLayer las encuentra.</h3>
+    <p style="font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:#7F77DD">¿Listo para verlo con tus datos?</p>
+    <h3 style="font-size:1.8rem;font-weight:700;margin-top:.5rem">Tu negocio tiene respuestas.<br>SmartLayer las encuentra.</h3>
     <div class="sl-cta-box">
-      <a href="mailto:miltonrosast88@gmail.com" class="sl-btn-p" data-i18n="sl.cta.btn1">Quiero una demo con mis datos</a>
-      <a href="https://www.linkedin.com/in/milton-rosas-tique-17434152/" class="sl-btn-g" target="_blank" data-i18n="sl.cta.btn2">Conectar en LinkedIn</a>
+      <a href="mailto:miltonrosast88@gmail.com" class="sl-btn-p">Quiero una demo con mis datos</a>
+      <a href="https://www.linkedin.com/in/milton-rosas-tique-17434152/" class="sl-btn-g" target="_blank">Conectar en LinkedIn</a>
     </div>
   </div>
 
@@ -690,41 +676,13 @@ const i18n = {
     "contact.title": "¿Construimos algo<br>juntos?",
     "contact.desc": "Estoy disponible para oportunidades en product management, fintech, pagos digitales y proyectos donde la IA potencie el producto.",
     "footer.text": "© 2026 Milton Rosas Tique · Product Manager · Fintech & Pagos Digitales",
-    "sl.badge": "Demo Interactivo · SmartLayer",
-    "sl.title": "Inteligencia sobre<br>tus datos.",
-    "sl.sub": "Convertimos los datos que ya tienes en decisiones que tu competencia no ve. Segmentación de clientes, predicción de demanda y analítica avanzada — sin necesidad de un equipo de data science.",
-    "sl.srv1.name": "Segmentación de clientes",
-    "sl.srv1.desc": "Agrupamos automáticamente a tus clientes por comportamiento, valor y frecuencia. Sabes exactamente a quién hablarle y cómo.",
-    "sl.srv1.tag": "Clustering · Comportamiento",
-    "sl.srv2.name": "Predicción de demanda",
-    "sl.srv2.desc": "Modelos estadísticos que anticipan qué vas a vender, cuándo y cuánto. Reduce inventario sobrante y nunca pierdas una venta por falta de stock.",
-    "sl.srv2.tag": "Forecasting · Series de tiempo",
-    "sl.srv3.name": "Dashboards de decisión",
-    "sl.srv3.desc": "Un panel a medida donde los datos de tu negocio se convierten en métricas claras. Lo que antes tardaba horas en un Excel, ahora lo ves en segundos.",
-    "sl.srv3.tag": "Visualización · Automatización",
-    "sl.demo.label": "Demo interactivo",
-    "sl.demo.title": "Así se ve SmartLayer en acción <span class=\"demo-badge\">DEMO</span>",
-    "sl.demo.note": "<strong>¿Qué estás viendo?</strong> Este dashboard usa datos reales de APIs públicas (precios crypto y clima) para demostrar visualmente las capacidades de SmartLayer. En una implementación real, los datos serían los de tu negocio.",
-    "sl.tab.crypto": "Mercado Crypto",
-    "sl.tab.weather": "Condiciones Globales",
-    "sl.refresh": "↻ Actualizar",
-    "sl.chart.bar": "Variación de precio 24h — Top activos",
-    "sl.panel.seg": "Segmentación de activos por comportamiento",
-    "sl.panel.mcap": "Distribución de capitalización de mercado",
-    "sl.chart.temp": "Temperatura horaria — Bogotá (últimas 24h)",
-    "sl.panel.cities": "Panel multi-ciudad en tiempo real",
-    "sl.panel.pred": "Predicción próximas 6 horas",
-    "sl.seg.bull": "Alcistas", "sl.seg.bear": "Bajistas", "sl.seg.stable": "Estables", "sl.seg.vol": "Volumen",
-    "sl.seg.rising": "activos en alza", "sl.seg.falling": "activos en caída", "sl.seg.neutral": "sin movimiento", "sl.seg.total24h": "total 24h",
-    "sl.kpi.current": "TEMP. ACTUAL", "sl.kpi.high": "MÁXIMA HOY", "sl.kpi.low": "MÍNIMA HOY", "sl.kpi.avg": "PROMEDIO DÍA",
-    "sl.kpi.now": "Bogotá ahora", "sl.kpi.peak": "▲ pico del día", "sl.kpi.nightlow": "▼ valle nocturno", "sl.kpi.dayavg": "temperatura media",
-    "sl.cond.warm": "Cálido", "sl.cond.mild": "Templado", "sl.cond.cool": "Fresco",
-    "sl.updated": "Actualizado: ", "sl.offline": "Demo (sin conexión)",
-    "sl.insight.loading": "Cargando análisis automático...", "sl.insight.weather.loading": "Cargando análisis climático...",
-    "sl.cta.label": "¿Listo para verlo con tus datos?",
-    "sl.cta.title": "Tu negocio tiene respuestas.<br>SmartLayer las encuentra.",
-    "sl.cta.btn1": "Quiero una demo con mis datos",
-    "sl.cta.btn2": "Conectar en LinkedIn"
+    "sl.badge":"Demo Interactivo · SmartLayer","sl.title":"Inteligencia sobre<br>tus datos.","sl.sub":"Convertimos los datos que ya tienes en decisiones que tu competencia no ve. Segmentación de clientes, predicción de demanda y analítica avanzada — sin necesidad de un equipo de data science.",
+    "sl.srv1.name":"Segmentación de clientes","sl.srv1.desc":"Agrupamos automáticamente a tus clientes por comportamiento, valor y frecuencia. Sabes exactamente a quién hablarle y cómo.","sl.srv1.tag":"Clustering · Comportamiento",
+    "sl.srv2.name":"Predicción de demanda","sl.srv2.desc":"Modelos estadísticos que anticipan qué vas a vender, cuándo y cuánto. Reduce inventario sobrante y nunca pierdas una venta por falta de stock.","sl.srv2.tag":"Forecasting · Series de tiempo",
+    "sl.srv3.name":"Dashboards de decisión","sl.srv3.desc":"Un panel a medida donde los datos de tu negocio se convierten en métricas claras. Lo que antes tardaba horas en un Excel, ahora lo ves en segundos.","sl.srv3.tag":"Visualización · Automatización",
+    "sl.demo.label":"Demo interactivo","sl.demo.title":"Así se ve SmartLayer en acción <span class=\"demo-badge\">DEMO</span>","sl.demo.note":"<strong>¿Qué estás viendo?</strong> Este dashboard usa datos reales de APIs públicas (precios crypto y clima) para demostrar las capacidades de SmartLayer. En una implementación real, los datos serían los de tu negocio.",
+    "sl.tab.crypto":"Mercado Crypto","sl.tab.weather":"Condiciones Globales",
+    "sl.cta.label":"¿Listo para verlo con tus datos?","sl.cta.title":"Tu negocio tiene respuestas.<br>SmartLayer las encuentra.","sl.cta.btn1":"Quiero una demo con mis datos","sl.cta.btn2":"Conectar en LinkedIn"
   },
   en: {
     "nav.about": "Profile",
@@ -802,41 +760,13 @@ const i18n = {
     "contact.title": "Shall we build<br>something together?",
     "contact.desc": "Open to opportunities in product management, fintech, digital payments, and projects where AI enhances the product.",
     "footer.text": "© 2026 Milton Rosas Tique · Product Manager · Fintech & Digital Payments",
-    "sl.badge": "Interactive Demo · SmartLayer",
-    "sl.title": "Intelligence from<br>your data.",
-    "sl.sub": "We turn the data you already have into decisions your competition can't see. Customer segmentation, demand forecasting, and advanced analytics — no data science team required.",
-    "sl.srv1.name": "Customer Segmentation",
-    "sl.srv1.desc": "Automatically group your customers by behavior, value, and frequency. Know exactly who to talk to and how.",
-    "sl.srv1.tag": "Clustering · Behavior",
-    "sl.srv2.name": "Demand Forecasting",
-    "sl.srv2.desc": "Statistical models that anticipate what you'll sell, when, and how much. Cut overstock and never miss a sale due to inventory gaps.",
-    "sl.srv2.tag": "Forecasting · Time Series",
-    "sl.srv3.name": "Decision Dashboards",
-    "sl.srv3.desc": "A custom panel where your business data turns into clear metrics. What used to take hours in a spreadsheet, you now see in seconds.",
-    "sl.srv3.tag": "Visualization · Automation",
-    "sl.demo.label": "Interactive demo",
-    "sl.demo.title": "This is SmartLayer in action <span class=\"demo-badge\">DEMO</span>",
-    "sl.demo.note": "<strong>What are you seeing?</strong> This dashboard uses real data from public APIs (crypto prices and weather) to visually demonstrate SmartLayer's analytics capabilities. In a real implementation, the data would be yours.",
-    "sl.tab.crypto": "Crypto Market",
-    "sl.tab.weather": "Global Conditions",
-    "sl.refresh": "↻ Refresh",
-    "sl.chart.bar": "24h price change — Top assets",
-    "sl.panel.seg": "Asset segmentation by behavior",
-    "sl.panel.mcap": "Market cap distribution",
-    "sl.chart.temp": "Hourly temperature — Bogotá (last 24h)",
-    "sl.panel.cities": "Multi-city real-time panel",
-    "sl.panel.pred": "Next 6 hours forecast",
-    "sl.seg.bull": "Bullish", "sl.seg.bear": "Bearish", "sl.seg.stable": "Stable", "sl.seg.vol": "Volume",
-    "sl.seg.rising": "assets rising", "sl.seg.falling": "assets falling", "sl.seg.neutral": "no movement", "sl.seg.total24h": "total 24h",
-    "sl.kpi.current": "CURRENT TEMP", "sl.kpi.high": "TODAY'S HIGH", "sl.kpi.low": "TODAY'S LOW", "sl.kpi.avg": "DAY AVERAGE",
-    "sl.kpi.now": "Bogotá now", "sl.kpi.peak": "▲ day peak", "sl.kpi.nightlow": "▼ night low", "sl.kpi.dayavg": "average temp",
-    "sl.cond.warm": "Warm", "sl.cond.mild": "Mild", "sl.cond.cool": "Cool",
-    "sl.updated": "Updated: ", "sl.offline": "Demo (offline)",
-    "sl.insight.loading": "Loading auto-analysis...", "sl.insight.weather.loading": "Loading climate analysis...",
-    "sl.cta.label": "Ready to see it with your data?",
-    "sl.cta.title": "Your business has answers.<br>SmartLayer finds them.",
-    "sl.cta.btn1": "I want a demo with my data",
-    "sl.cta.btn2": "Connect on LinkedIn"
+    "sl.badge":"Interactive Demo · SmartLayer","sl.title":"Intelligence from<br>your data.","sl.sub":"We turn the data you already have into decisions your competition can't see. Customer segmentation, demand forecasting, and advanced analytics — no data science team required.",
+    "sl.srv1.name":"Customer Segmentation","sl.srv1.desc":"Automatically group your customers by behavior, value, and frequency. Know exactly who to talk to and how.","sl.srv1.tag":"Clustering · Behavior",
+    "sl.srv2.name":"Demand Forecasting","sl.srv2.desc":"Statistical models that anticipate what you'll sell, when, and how much. Cut overstock and never miss a sale due to inventory gaps.","sl.srv2.tag":"Forecasting · Time Series",
+    "sl.srv3.name":"Decision Dashboards","sl.srv3.desc":"A custom panel where your business data turns into clear metrics. What used to take hours in a spreadsheet, you now see in seconds.","sl.srv3.tag":"Visualization · Automation",
+    "sl.demo.label":"Interactive demo","sl.demo.title":"This is SmartLayer in action <span class=\"demo-badge\">DEMO</span>","sl.demo.note":"<strong>What are you seeing?</strong> This dashboard uses real data from public APIs (crypto prices and weather) to visually demonstrate SmartLayer's analytics capabilities. In a real implementation, the data would be yours.",
+    "sl.tab.crypto":"Crypto Market","sl.tab.weather":"Global Conditions",
+    "sl.cta.label":"Ready to see it with your data?","sl.cta.title":"Your business has answers.<br>SmartLayer finds them.","sl.cta.btn1":"I want a demo with my data","sl.cta.btn2":"Connect on LinkedIn"
   }
 };
 
@@ -844,15 +774,11 @@ const i18n = {
 // LANGUAGE ENGINE
 // ════════════════════════════════════════════════
 let currentLang = 'es';
-// Declared here so applyLang() can reference them safely before SmartLayer init
-let slCurrentTab = 'crypto', slCryptoData = [];
 
 function detectLang() {
   const nav = navigator.language || navigator.userLanguage || 'es';
   return nav.toLowerCase().startsWith('en') ? 'en' : 'es';
 }
-
-function slT(key) { return (i18n[currentLang] && i18n[currentLang][key]) || key; }
 
 function renderPoints(id, key) {
   const el = document.getElementById(id);
@@ -877,13 +803,6 @@ function applyLang(lang) {
   renderPoints('exp-j2-points', 'exp.j2.points');
   renderPoints('exp-j3-points', 'exp.j3.points');
 
-  // Re-render dynamic SmartLayer content if already loaded
-  if (slCryptoData.length > 0) {
-    if (slCurrentTab === 'crypto') slRenderCrypto(slCryptoData);
-    else slLoadWeather();
-  }
-  slUpdateTimestampEl();
-
   localStorage.setItem('lang', lang);
 }
 
@@ -896,19 +815,8 @@ function setLang(lang) {
   }, 250);
 }
 
-// ════════════════════════════════════════════════
-// THEME ENGINE
-// ════════════════════════════════════════════════
-function toggleTheme() {
-  const isLight = document.body.classList.toggle('light');
-  document.getElementById('themeBtn').textContent = isLight ? '☾' : '☀';
-  localStorage.setItem('theme', isLight ? 'light' : 'dark');
-}
-
 // Init
 const saved = localStorage.getItem('lang');
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme === 'light') { document.body.classList.add('light'); document.getElementById('themeBtn').textContent = '☾'; }
 applyLang(saved || detectLang());
 
 // ════════════════════════════════════════════════
@@ -1022,19 +930,8 @@ window.addEventListener('scroll',()=>{const h=document.body.scrollHeight-window.
 // ════════════════════════════════════════════════
 // SMARTLAYER DASHBOARD
 // ════════════════════════════════════════════════
-let slBarC, slDonutC, slTempC, slPredC;
-let slLastUpdateTime = null, slIsOffline = false;
+let slBarC, slDonutC, slTempC, slPredC, slCurrentTab = 'crypto', slCryptoData = [];
 const SL_COLORS = ['#7F77DD','#1D9E75','#EF9F27','#D4537E','#378ADD','#D85A30'];
-
-function slUpdateTimestampEl() {
-  const el = document.getElementById('slLastUpdate');
-  if (!el) return;
-  if (slIsOffline) { el.textContent = slT('sl.offline'); return; }
-  if (slLastUpdateTime) {
-    const locale = currentLang === 'en' ? 'en-US' : 'es-CO';
-    el.textContent = slT('sl.updated') + slLastUpdateTime.toLocaleTimeString(locale);
-  }
-}
 
 function selectSrv(el) {
   document.querySelectorAll('.srv-card').forEach(c => c.classList.remove('active-srv'));
@@ -1056,9 +953,9 @@ async function slLoadCrypto() {
   try {
     const r = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=8&page=1&sparkline=false&price_change_percentage=24h');
     slCryptoData = await r.json();
-    slIsOffline = false; slLastUpdateTime = new Date();
     slRenderCrypto(slCryptoData);
-    slUpdateTimestampEl();
+    const loc = currentLang === 'en' ? 'en-US' : 'es-CO';
+    document.getElementById('slLastUpdate').textContent = (currentLang==='en'?'Updated: ':'Actualizado: ') + new Date().toLocaleTimeString(loc);
   } catch(e) { slUseFallback(); }
 }
 
@@ -1073,9 +970,8 @@ function slUseFallback() {
     {name:'Cardano',symbol:'ada',current_price:0.48,price_change_percentage_24h:1.22,market_cap:17000000000,total_volume:480000000},
     {name:'Avalanche',symbol:'avax',current_price:38,price_change_percentage_24h:-2.15,market_cap:15000000000,total_volume:620000000},
   ];
-  slIsOffline = true; slLastUpdateTime = null;
   slRenderCrypto(slCryptoData);
-  slUpdateTimestampEl();
+  document.getElementById('slLastUpdate').textContent = 'Demo (sin conexión)';
 }
 
 function slRenderCrypto(data) {
@@ -1113,21 +1009,19 @@ function slRenderCrypto(data) {
   const losers = data.filter(c=>c.price_change_percentage_24h<-1).length;
   const stable = data.length-winners-losers;
   const totalVol = data.reduce((a,c)=>a+c.total_volume,0);
+  const isEN = currentLang === 'en';
   document.getElementById('slSegGrid').innerHTML = `
-    <div class="sl-seg-bubble" style="background:rgba(29,158,117,.08);border-color:rgba(29,158,117,.25)"><div class="sl-seg-name" style="color:#5DCAA5">${slT('sl.seg.bull')}</div><div class="sl-seg-pct" style="color:#5DCAA5">${winners}</div><div class="sl-seg-sub">${slT('sl.seg.rising')}</div></div>
-    <div class="sl-seg-bubble" style="background:rgba(240,149,149,.08);border-color:rgba(240,149,149,.25)"><div class="sl-seg-name" style="color:#F09595">${slT('sl.seg.bear')}</div><div class="sl-seg-pct" style="color:#F09595">${losers}</div><div class="sl-seg-sub">${slT('sl.seg.falling')}</div></div>
-    <div class="sl-seg-bubble" style="background:rgba(127,119,221,.08);border-color:rgba(127,119,221,.2)"><div class="sl-seg-name" style="color:#AFA9EC">${slT('sl.seg.stable')}</div><div class="sl-seg-pct" style="color:#AFA9EC">${stable}</div><div class="sl-seg-sub">${slT('sl.seg.neutral')}</div></div>
-    <div class="sl-seg-bubble" style="background:rgba(186,117,23,.08);border-color:rgba(186,117,23,.25)"><div class="sl-seg-name" style="color:#EF9F27">${slT('sl.seg.vol')}</div><div class="sl-seg-pct" style="color:#EF9F27">$${slFmt(Math.round(totalVol/1e9))}B</div><div class="sl-seg-sub">${slT('sl.seg.total24h')}</div></div>`;
+    <div class="sl-seg-bubble" style="background:rgba(29,158,117,.08);border-color:rgba(29,158,117,.25)"><div class="sl-seg-name" style="color:#5DCAA5">${isEN?'Bullish':'Alcistas'}</div><div class="sl-seg-pct" style="color:#5DCAA5">${winners}</div><div class="sl-seg-sub">${isEN?'assets rising':'activos en alza'}</div></div>
+    <div class="sl-seg-bubble" style="background:rgba(240,149,149,.08);border-color:rgba(240,149,149,.25)"><div class="sl-seg-name" style="color:#F09595">${isEN?'Bearish':'Bajistas'}</div><div class="sl-seg-pct" style="color:#F09595">${losers}</div><div class="sl-seg-sub">${isEN?'assets falling':'activos en caída'}</div></div>
+    <div class="sl-seg-bubble" style="background:rgba(127,119,221,.08);border-color:rgba(127,119,221,.2)"><div class="sl-seg-name" style="color:#AFA9EC">${isEN?'Stable':'Estables'}</div><div class="sl-seg-pct" style="color:#AFA9EC">${stable}</div><div class="sl-seg-sub">${isEN?'no movement':'sin movimiento'}</div></div>
+    <div class="sl-seg-bubble" style="background:rgba(186,117,23,.08);border-color:rgba(186,117,23,.25)"><div class="sl-seg-name" style="color:#EF9F27">${isEN?'Volume':'Volumen'}</div><div class="sl-seg-pct" style="color:#EF9F27">$${slFmt(Math.round(totalVol/1e9))}B</div><div class="sl-seg-sub">${isEN?'total 24h':'total 24h'}</div></div>`;
 
   const best = data.reduce((a,b)=>a.price_change_percentage_24h>b.price_change_percentage_24h?a:b);
   const byVol = [...data].sort((a,b)=>b.total_volume-a.total_volume)[0];
-  const trend = winners>losers ? (currentLang==='en'?'bullish momentum':'tendencia alcista') : (currentLang==='en'?'bearish pressure':'presión bajista');
-  const insightPrefix = currentLang==='en' ? 'SmartLayer Auto-Analysis' : 'Análisis automático SmartLayer';
-  const insightSuffix = currentLang==='en'
-    ? `This same analysis applied to your business reveals which products, customers, or channels are generating or losing value — in real time.`
-    : `Este tipo de análisis aplicado a tu negocio revela qué productos, clientes o canales están generando o perdiendo valor — en tiempo real.`;
-  document.getElementById('slInsightBarText').innerHTML =
-    `<strong>${insightPrefix}:</strong> ${currentLang==='en'?'Best performer':'El activo con mejor desempeño'}: <strong>${best.name}</strong> ${currentLang==='en'?'at':'con'} <strong>+${best.price_change_percentage_24h.toFixed(2)}%</strong>. ${currentLang==='en'?`Market shows ${trend} with`:`El mercado muestra ${trend} con`} ${winners} ${currentLang==='en'?`of ${data.length} assets in positive territory. Highest volume:`:`de ${data.length} activos en positivo. Mayor volumen:`} <strong>${byVol.name}</strong>. ${insightSuffix}`;
+  const insightHTML = isEN
+    ? `<strong>SmartLayer Auto-Analysis:</strong> Best performer: <strong>${best.name}</strong> at <strong>+${best.price_change_percentage_24h.toFixed(2)}%</strong>. Market shows ${winners>losers?'bullish momentum':'bearish pressure'} with ${winners} of ${data.length} assets positive. Highest volume: <strong>${byVol.name}</strong>. Applied to your business, this reveals which products, customers or channels are generating or losing value — in real time.`
+    : `<strong>Análisis automático SmartLayer:</strong> El activo con mejor desempeño es <strong>${best.name}</strong> con <strong>+${best.price_change_percentage_24h.toFixed(2)}%</strong>. El mercado muestra ${winners>losers?'tendencia alcista':'presión bajista'} con ${winners} de ${data.length} activos en positivo. Mayor volumen: <strong>${byVol.name}</strong>. Este tipo de análisis aplicado a tu negocio revela qué productos, clientes o canales están generando o perdiendo valor — en tiempo real.`;
+  document.getElementById('slInsightBar').querySelector('.sl-insight-text').innerHTML = insightHTML;
 }
 
 const SL_CITIES = [{name:'Bogotá',lat:4.71,lon:-74.07},{name:'Medellín',lat:6.25,lon:-75.56},{name:'Ciudad de México',lat:19.43,lon:-99.13},{name:'Miami',lat:25.77,lon:-80.19},{name:'Madrid',lat:40.42,lon:-3.70}];
@@ -1162,31 +1056,29 @@ async function slLoadWeather() {
     const maxT = Math.max(...temps);
     const minT = Math.min(...temps);
     const avgT = (temps.reduce((a,b)=>a+b,0)/temps.length).toFixed(1);
+    const wEN = currentLang === 'en';
     document.getElementById('slWeatherKpi').innerHTML = `
-      <div class="sl-kpi"><div class="sl-kpi-label">${slT('sl.kpi.current')}</div><div class="sl-kpi-val">${curTemp}°C</div><div class="sl-kpi-delta sl-flat">${slT('sl.kpi.now')}</div></div>
-      <div class="sl-kpi"><div class="sl-kpi-label">${slT('sl.kpi.high')}</div><div class="sl-kpi-val">${maxT}°C</div><div class="sl-kpi-delta sl-up">${slT('sl.kpi.peak')}</div></div>
-      <div class="sl-kpi"><div class="sl-kpi-label">${slT('sl.kpi.low')}</div><div class="sl-kpi-val">${minT}°C</div><div class="sl-kpi-delta sl-down">${slT('sl.kpi.nightlow')}</div></div>
-      <div class="sl-kpi"><div class="sl-kpi-label">${slT('sl.kpi.avg')}</div><div class="sl-kpi-val">${avgT}°C</div><div class="sl-kpi-delta sl-flat">${slT('sl.kpi.dayavg')}</div></div>`;
+      <div class="sl-kpi"><div class="sl-kpi-label">${wEN?'CURRENT TEMP':'TEMP. ACTUAL'}</div><div class="sl-kpi-val">${curTemp}°C</div><div class="sl-kpi-delta sl-flat">${wEN?'Bogotá now':'Bogotá ahora'}</div></div>
+      <div class="sl-kpi"><div class="sl-kpi-label">${wEN?"TODAY'S HIGH":'MÁXIMA HOY'}</div><div class="sl-kpi-val">${maxT}°C</div><div class="sl-kpi-delta sl-up">${wEN?'▲ day peak':'▲ pico del día'}</div></div>
+      <div class="sl-kpi"><div class="sl-kpi-label">${wEN?"TODAY'S LOW":'MÍNIMA HOY'}</div><div class="sl-kpi-val">${minT}°C</div><div class="sl-kpi-delta sl-down">${wEN?'▼ night low':'▼ valle nocturno'}</div></div>
+      <div class="sl-kpi"><div class="sl-kpi-label">${wEN?'DAY AVERAGE':'PROMEDIO DÍA'}</div><div class="sl-kpi-val">${avgT}°C</div><div class="sl-kpi-delta sl-flat">${wEN?'average temp':'temperatura media'}</div></div>`;
 
     const cityTemps = [curTemp, curTemp+5, curTemp+10, curTemp+12, curTemp+8];
     document.getElementById('slCityList').innerHTML = SL_CITIES.map((c,i)=>{
       const t = (cityTemps[i]+(Math.random()*2-1)).toFixed(1);
-      const cond = t>25?slT('sl.cond.warm'):t>18?slT('sl.cond.mild'):slT('sl.cond.cool');
+      const cond = t>25?(wEN?'Warm':'Cálido'):t>18?(wEN?'Mild':'Templado'):(wEN?'Cool':'Fresco');
       return `<div class="sl-weather-row"><span class="sl-weather-city">${c.name}</span><div style="text-align:right"><div class="sl-weather-temp">${t}°C</div><div class="sl-weather-cond">${cond}</div></div></div>`;
     }).join('');
 
-    const wPrefix = currentLang==='en' ? 'SmartLayer Predictive Analysis' : 'Análisis predictivo SmartLayer';
-    const wBody = currentLang==='en'
-      ? `Bogotá will reach a peak of <strong>${maxT}°C</strong> with a low of <strong>${minT}°C</strong>. This same model applied to your business can anticipate <strong>demand spikes, customer behavior, or inventory needs</strong> days in advance.`
-      : `La temperatura en Bogotá alcanzará su pico de <strong>${maxT}°C</strong> con un mínimo de <strong>${minT}°C</strong>. Este mismo modelo aplicado a tu negocio puede anticipar <strong>picos de demanda, comportamiento de clientes o necesidades de inventario</strong> con días de anticipación.`;
-    document.getElementById('slWeatherInsightText').innerHTML = `<strong>${wPrefix}:</strong> ${wBody}`;
+    const wInsight = wEN
+      ? `<strong>SmartLayer Predictive Analysis:</strong> Bogotá will reach a peak of <strong>${maxT}°C</strong> with a low of <strong>${minT}°C</strong>. This same model applied to your business can anticipate <strong>demand spikes, customer behavior, or inventory needs</strong> days in advance.`
+      : `<strong>Análisis predictivo SmartLayer:</strong> La temperatura en Bogotá alcanzará su pico de <strong>${maxT}°C</strong> con un mínimo de <strong>${minT}°C</strong>. Este mismo modelo aplicado a tu negocio puede anticipar <strong>picos de demanda, comportamiento de clientes o necesidades de inventario</strong> con días de anticipación.`;
+    document.getElementById('slWeatherInsight').querySelector('.sl-insight-text').innerHTML = wInsight;
 
-    slIsOffline = false; slLastUpdateTime = new Date();
-    slUpdateTimestampEl();
+    const locale = currentLang === 'en' ? 'en-US' : 'es-CO';
+    document.getElementById('slLastUpdate').textContent = (wEN?'Updated: ':'Actualizado: ') + new Date().toLocaleTimeString(locale);
   } catch(e) {
-    const label = currentLang==='en' ? 'STATUS' : 'ESTADO';
-    const msg = currentLang==='en' ? 'No connection' : 'Sin conexión';
-    document.getElementById('slWeatherKpi').innerHTML = `<div class="sl-kpi"><div class="sl-kpi-label">${label}</div><div class="sl-kpi-val" style="font-size:1rem">${msg}</div></div>`;
+    document.getElementById('slWeatherKpi').innerHTML = `<div class="sl-kpi"><div class="sl-kpi-label">ESTADO</div><div class="sl-kpi-val" style="font-size:1rem">Sin conexión</div></div>`;
   }
 }
 
@@ -1201,6 +1093,40 @@ function slLoadAll() {
   s.onload = slLoadCrypto;
   document.head.appendChild(s);
 })();
+
+// ════════════════════════════════════════════════
+// THEME TOGGLE
+// ════════════════════════════════════════════════
+function toggleTheme() {
+  const isLight = document.body.classList.toggle('light');
+  document.getElementById('themeBtn').textContent = isLight ? '☾' : '☀';
+  localStorage.setItem('theme', isLight ? 'light' : 'dark');
+}
+(function initTheme() {
+  if (localStorage.getItem('theme') === 'light') {
+    document.body.classList.add('light');
+    document.getElementById('themeBtn').textContent = '☾';
+  }
+})();
+
+// ════════════════════════════════════════════════
+// SMARTLAYER i18n — dynamic content re-render on lang switch
+// ════════════════════════════════════════════════
+function slT(key) {
+  return (i18n[currentLang] && i18n[currentLang][key]) || key;
+}
+
+// Patch setLang to also refresh SmartLayer dynamic content
+const _origSetLang = setLang;
+function setLang(lang) {
+  _origSetLang(lang);
+  setTimeout(function() {
+    if (slCryptoData.length > 0) {
+      if (slCurrentTab === 'crypto') slRenderCrypto(slCryptoData);
+      else slLoadWeather();
+    }
+  }, 300);
+}
 </script>
 </body>
 </html>
