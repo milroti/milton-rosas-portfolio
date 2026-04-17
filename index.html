@@ -844,6 +844,8 @@ const i18n = {
 // LANGUAGE ENGINE
 // ════════════════════════════════════════════════
 let currentLang = 'es';
+// Declared here so applyLang() can reference them safely before SmartLayer init
+let slCurrentTab = 'crypto', slCryptoData = [];
 
 function detectLang() {
   const nav = navigator.language || navigator.userLanguage || 'es';
@@ -875,16 +877,12 @@ function applyLang(lang) {
   renderPoints('exp-j2-points', 'exp.j2.points');
   renderPoints('exp-j3-points', 'exp.j3.points');
 
-  // Re-render dynamic SmartLayer content
-  const insightLoading = document.getElementById('slInsightBarText');
-  const weatherLoading = document.getElementById('slWeatherInsightText');
-  if (insightLoading && !insightLoading.innerHTML) insightLoading.textContent = slT('sl.insight.loading');
-  if (weatherLoading && !weatherLoading.innerHTML) weatherLoading.textContent = slT('sl.insight.weather.loading');
-  if (typeof slCryptoData !== 'undefined' && slCryptoData.length > 0) {
+  // Re-render dynamic SmartLayer content if already loaded
+  if (slCryptoData.length > 0) {
     if (slCurrentTab === 'crypto') slRenderCrypto(slCryptoData);
     else slLoadWeather();
   }
-  if (typeof slUpdateTimestampEl === 'function') slUpdateTimestampEl();
+  slUpdateTimestampEl();
 
   localStorage.setItem('lang', lang);
 }
@@ -1024,7 +1022,7 @@ window.addEventListener('scroll',()=>{const h=document.body.scrollHeight-window.
 // ════════════════════════════════════════════════
 // SMARTLAYER DASHBOARD
 // ════════════════════════════════════════════════
-let slBarC, slDonutC, slTempC, slPredC, slCurrentTab = 'crypto', slCryptoData = [];
+let slBarC, slDonutC, slTempC, slPredC;
 let slLastUpdateTime = null, slIsOffline = false;
 const SL_COLORS = ['#7F77DD','#1D9E75','#EF9F27','#D4537E','#378ADD','#D85A30'];
 
