@@ -812,6 +812,11 @@ function setLang(lang) {
   setTimeout(() => {
     applyLang(lang);
     fades.forEach(el => el.classList.remove('switching'));
+    // Re-render SmartLayer dynamic content with new language
+    if (slCryptoData.length > 0) {
+      if (slCurrentTab === 'crypto') slRenderCrypto(slCryptoData);
+      else slLoadWeather();
+    }
   }, 250);
 }
 
@@ -1110,22 +1115,10 @@ function toggleTheme() {
 })();
 
 // ════════════════════════════════════════════════
-// SMARTLAYER i18n — dynamic content re-render on lang switch
+// SMARTLAYER i18n helper
 // ════════════════════════════════════════════════
 function slT(key) {
   return (i18n[currentLang] && i18n[currentLang][key]) || key;
-}
-
-// Patch setLang to also refresh SmartLayer dynamic content
-const _origSetLang = setLang;
-function setLang(lang) {
-  _origSetLang(lang);
-  setTimeout(function() {
-    if (slCryptoData.length > 0) {
-      if (slCurrentTab === 'crypto') slRenderCrypto(slCryptoData);
-      else slLoadWeather();
-    }
-  }, 300);
 }
 </script>
 </body>
