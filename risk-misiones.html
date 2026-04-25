@@ -653,7 +653,7 @@
     z-index: 10;
     width: 100%;
     overflow: hidden;
-    max-height: 420px;
+    max-height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -661,11 +661,11 @@
 
   .hero-band img {
     width: 100%;
-    max-height: 420px;
+    max-height: 600px;
     object-fit: cover;
-    object-position: center 20%;
+    object-position: center 15%;
     display: block;
-    filter: saturate(1.1) brightness(0.75);
+    filter: saturate(1.2) brightness(1.0) contrast(1.05);
   }
 
   .hero-overlay {
@@ -673,9 +673,10 @@
     inset: 0;
     background: linear-gradient(
       180deg,
-      rgba(0,0,0,0.55) 0%,
-      rgba(13,8,0,0.2) 40%,
-      rgba(13,8,0,0.7) 85%,
+      rgba(0,0,0,0.25) 0%,
+      rgba(0,0,0,0.0) 20%,
+      rgba(0,0,0,0.0) 65%,
+      rgba(13,8,0,0.6) 85%,
       rgba(13,8,0,1) 100%
     );
     pointer-events: none;
@@ -696,7 +697,7 @@
     letter-spacing: 6px;
     text-transform: uppercase;
     color: var(--gold);
-    opacity: 0.8;
+    opacity: 0.9;
     text-shadow: 0 2px 8px rgba(0,0,0,0.9);
   }
 
